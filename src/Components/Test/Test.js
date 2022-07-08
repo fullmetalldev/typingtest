@@ -7,7 +7,9 @@ import "./test.css"
 const Test = () => {
     const [userText, setUserText] = useRecoilState(userTextSelect);
 
-    const [inputText, setInputText] = useState([]);
+    const [inputText, setInputText] = useState('');
+
+
 
     const navigate = useNavigate();
     useEffect
@@ -25,19 +27,15 @@ const Test = () => {
                 <div className="text">
                     <h3>{userText}</h3>
                     <h3 className="userText">
-                        {inputText.join('')}
+                        {inputText}
                     </h3>
                 </div>
-                <input value={inputText.join('')} onChange={(e) => {
+                <input value={inputText} onChange={(e) => {
                     if (e.target.value.split('')[e.target.value.length-1] === userText.split('')[e.target.value.length-1]) {
                        setInputText(
-                           [...inputText, e.target.value.split('')[e.target.value.length-1]]
+                           inputText + e.target.value.split('')[e.target.value.length-1]
                        )
                     }
-                    // else {
-                    //     let hui = e.target.value.split('').pop();
-                    //     setInputText(hui)
-                    // }
                 }}/>
             </div>
         </div>
