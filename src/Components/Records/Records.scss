@@ -1,0 +1,17 @@
+.Records{
+  margin-top: 20px;
+  h2{
+    color: #1BBC9B;
+  }
+  ul{
+    margin-top: 10px;
+    list-style-type: decimal;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    li{
+      font-size: 18px;
+    }
+  }
+}

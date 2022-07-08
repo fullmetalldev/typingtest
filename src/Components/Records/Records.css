@@ -1,0 +1,19 @@
+.Records {
+  margin-top: 20px;
+}
+.Records h2 {
+  color: #1BBC9B;
+}
+.Records ul {
+  margin-top: 10px;
+  list-style-type: decimal;
+  padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.Records ul li {
+  font-size: 18px;
+}
+
+/*# sourceMappingURL=Records.css.map */

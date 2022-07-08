@@ -1,0 +1,69 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.App {
+  background: #EDF7FF;
+  min-height: 100vh;
+}
+
+.container {
+  padding: 15px;
+  width: 100%;
+  max-width: 1295px;
+  margin: 0 auto;
+}
+
+.Main a {
+  text-decoration: none;
+}
+.Main__header {
+  display: flex;
+  align-items: center;
+  column-gap: 50px;
+  justify-content: center;
+  flex-direction: column;
+}
+.Main__header-input {
+  font-size: 18px;
+  color: black;
+  outline: none;
+  resize: none;
+  padding: 5px;
+  width: 370px;
+  height: 200px;
+  border: none;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+.Main__header-input:focus {
+  color: #fff;
+  transition: 0.3s;
+  background: #1BBC9B;
+}
+.Main__header-title {
+  color: #1BBC9B;
+  padding: 10px;
+  border-radius: 5px;
+}
+.Main__header-href {
+  border-radius: 5px;
+  padding: 5px;
+  transition: 0.3s;
+  cursor: pointer;
+  font-size: 24px;
+  margin-top: 30px;
+  background: white;
+  color: #1BBC9B;
+}
+.Main__header-href:hover {
+  padding: 8px;
+  transition: 0.3s;
+  background-color: #1BBC9B;
+  color: white;
+}
+
+/*# sourceMappingURL=styles.css.map */

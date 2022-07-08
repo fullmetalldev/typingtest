@@ -1,0 +1,19 @@
+.Test input {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+.Test .text {
+  position: relative;
+}
+.Test .userText {
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #00c100;
+}
+
+/*# sourceMappingURL=test.css.map */
