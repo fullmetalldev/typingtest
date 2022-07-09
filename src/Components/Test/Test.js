@@ -15,9 +15,8 @@ const Test = () => {
     const [accuracy, setAccuracy] = useState(0);
 
     const timerFunc = () => {
-        setInterval(()=>{
-            setTime(prev => prev + 0.5)
-        }, 500)
+        setTime(prev => prev + 0.5);
+        // console.log(inputText)
     };
 
     const navigate = useNavigate();
@@ -26,7 +25,6 @@ const Test = () => {
         if (userText.length < 300) {
             navigate("/")
         }
-
     }, []);
 
     return (
@@ -54,8 +52,11 @@ const Test = () => {
                         setAccuracy(accuracy + 1)
                     }
                     if (inputText.length === 1) {
-                        timerFunc()
+                        setInterval(() => {
+                            timerFunc()
+                        }, 500)
                     }
+
                 }}/>
             </div>
         </div>
