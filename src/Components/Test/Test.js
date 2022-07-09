@@ -39,7 +39,7 @@ const Test = () => {
                         <span style={{color: "black"}}>{userText}</span>
                     </h3>
                     <div className="statistic">
-                        <span>Скорость: {((all / time) * 60).toFixed(2)}</span>
+                        <span>Скорость: {time ? ((all / time) * 60).toFixed(2) : 0}</span>
                         <span>Точность: {all > 0 ? (100 - (accuracy * 100 / all)).toFixed(2) : 100.00}%</span>
                     </div>
                 </div>
