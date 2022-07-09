@@ -14,9 +14,13 @@ const Test = () => {
     const [all, setAll] = useState(0);
     const [accuracy, setAccuracy] = useState(0);
 
+    const [test, setTest] = useState(null);
+
     const timerFunc = () => {
         setTime(prev => prev + 0.5);
-        // console.log(inputText)
+        if (userText.length === 0) {
+            clearInterval()
+        }
     };
 
     const navigate = useNavigate();
@@ -37,11 +41,12 @@ const Test = () => {
                         <span style={{color: "black"}}>{userText}</span>
                     </h3>
                     <div className="statistic">
-                        <span>Скорость: {time ? ((all / time) * 60).toFixed(2) : 0}</span>
+                        <span>Скорость: {((all / time) * 60).toFixed(2)}</span>
                         <span>Точность: {all > 0 ? (100 - (accuracy * 100 / all)).toFixed(2) : 100.00}%</span>
                     </div>
                 </div>
                 <input value={inputText} onChange={(e) => {
+                    console.log(userText.length)
                     setAll(all + 1);
                     if (e.target.value.split('')[e.target.value.length - 1] === userText.split('')[0]) {
                         setUserText(userText.slice(1));
@@ -52,9 +57,12 @@ const Test = () => {
                         setAccuracy(accuracy + 1)
                     }
                     if (inputText.length === 1) {
-                        setInterval(() => {
-                            timerFunc()
-                        }, 500)
+                        setTest(setInterval(timerFunc, 500));
+                    }
+                    if (userText.length === 0) {
+                        console.log("TEST");
+                        console.log(test)
+                        clearInterval(test)
                     }
 
                 }}/>
