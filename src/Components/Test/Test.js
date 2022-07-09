@@ -16,8 +16,8 @@ const Test = () => {
 
     const timerFunc = () => {
         setInterval(()=>{
-            setTime(prev => prev + 0.1)
-        }, 100)
+            setTime(prev => prev + 0.5)
+        }, 500)
     };
 
     const navigate = useNavigate();
@@ -39,7 +39,7 @@ const Test = () => {
                         <span style={{color: "black"}}>{userText}</span>
                     </h3>
                     <div className="statistic">
-                        <span>Скорость: {(all * (time / 60)).toFixed(2)}</span>
+                        <span>Скорость: {((all / time) * 60).toFixed(2)}</span>
                         <span>Точность: {all > 0 ? (100 - (accuracy * 100 / all)).toFixed(2) : 100.00}%</span>
                     </div>
                 </div>
