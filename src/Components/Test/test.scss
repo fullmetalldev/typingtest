@@ -11,9 +11,16 @@
     position: relative;
   }
   .userText{
-    position: absolute;
-    left: 0;
-    top: 0;
-    color: #00c100;
+    color: #1BBC9B;
+  }
+  .statistic{
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    width: 100%;
+    padding: 15px;
   }
 }
