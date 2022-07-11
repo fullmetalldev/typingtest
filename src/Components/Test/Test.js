@@ -3,6 +3,7 @@ import {userTextSelect} from "../../recoil/input";
 import {useRecoilState} from "recoil";
 import {useNavigate} from "react-router-dom";
 import "./test.css"
+import Record from "../Record/Record";
 
 const Test = () => {
 
@@ -18,9 +19,6 @@ const Test = () => {
 
     const timerFunc = () => {
         setTime(prev => prev + 0.5);
-        if (userText.length === 0) {
-            clearInterval()
-        }
     };
 
     const navigate = useNavigate();
@@ -45,8 +43,7 @@ const Test = () => {
                         <span>Точность: {all > 0 ? (100 - (accuracy * 100 / all)).toFixed(2) : 100.00}%</span>
                     </div>
                 </div>
-                <input value={inputText} onChange={(e) => {
-                    console.log(userText.length)
+                <input className="input" value={inputText} onChange={(e) => {
                     setAll(all + 1);
                     if (e.target.value.split('')[e.target.value.length - 1] === userText.split('')[0]) {
                         setUserText(userText.slice(1));
@@ -59,14 +56,16 @@ const Test = () => {
                     if (inputText.length === 1) {
                         setTest(setInterval(timerFunc, 500));
                     }
-                    if (userText.length === 0) {
-                        console.log("TEST");
-                        console.log(test)
+                    if (userText.length === 1) {
                         clearInterval(test)
                     }
-
                 }}/>
+                {userText.length === 0
+                    ? <Record accuracy={(100 - (accuracy * 100 / all)).toFixed(2)} all={((all / time) * 60).toFixed(2)}/>
+                    : ""
+                }
             </div>
+
         </div>
     );
 };

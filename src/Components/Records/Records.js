@@ -27,7 +27,7 @@ const Records = () => {
     useEffect(() => {
         onValue(starCountRef, async (snapshot) => {
             const data = snapshot.val();
-            setRecords(data)
+            setRecords(Object.values(data))
         });
     }, []);
 
@@ -39,9 +39,9 @@ const Records = () => {
                 {records ?
                     records.map((item ,idx)=>(
                         <li key={idx}>
-                            <span>{item.name}</span>
-                            <span> - </span>
-                            <span>{item.length}</span>
+                            <span style={{marginRight: 25}}>Имя: {item.name}</span>
+                            <span style={{marginRight: 25}}>Скорость: {item.length}</span>
+                            <span>Точность: {item.accuracy}%</span>
                         </li>
 
 
