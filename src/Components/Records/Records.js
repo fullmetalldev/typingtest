@@ -34,8 +34,7 @@ const Records = () => {
     const recordList = ()=>{
       return  records.map((item ,idx)=>(
             <li key={idx}>
-                <span>{idx+1}</span>
-                <span>{item.name}</span>
+                <span>{idx+1}.{item.name}</span>
                 <span>{item.length}</span>
                 <span>{item.accuracy}%</span>
             </li>
@@ -47,7 +46,6 @@ const Records = () => {
             <h2>Таблица рекордов:</h2>
             <ul>
                 <li>
-                    <span> </span>
                     <span>Имя:</span>
                     <span>Скорость:</span>
                     <span>Аккуратность:</span>
