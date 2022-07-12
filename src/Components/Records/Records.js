@@ -31,19 +31,30 @@ const Records = () => {
         });
     }, []);
 
+    const recordList = ()=>{
+      return  records.map((item ,idx)=>(
+            <li key={idx}>
+                <span>{idx+1}</span>
+                <span>{item.name}</span>
+                <span>{item.length}</span>
+                <span>{item.accuracy}%</span>
+            </li>
+        ))
+    };
 
     return (
         <div className="Records">
             <h2>Таблица рекордов:</h2>
             <ul>
+                <li>
+                    <span> </span>
+                    <span>Имя:</span>
+                    <span>Скорость:</span>
+                    <span>Аккуратность:</span>
+                </li>
                 {records ?
-                    records.map((item ,idx)=>(
-                        <li key={idx}>
-                            <span style={{marginRight: 25}}>Имя: {item.name}</span>
-                            <span style={{marginRight: 25}}>Скорость: {item.length}</span>
-                            <span>Точность: {item.accuracy}%</span>
-                        </li>
-                    )) : "EMPTY!"}
+                    recordList()
+ : "EMPTY!"}
             </ul>
 
         </div>

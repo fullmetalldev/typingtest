@@ -1,19 +1,28 @@
 .Records {
+  background-color: #ffffff60;
+  border-radius: 15px;
   margin-top: 20px;
+  padding: 15px;
 }
 .Records h2 {
   color: #1BBC9B;
 }
 .Records ul {
   margin-top: 10px;
-  list-style-type: decimal;
-  padding-left: 10px;
+  list-style-type: none;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 .Records ul li {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
   font-size: 18px;
+  color: white;
+}
+.Records ul li span {
+  width: 100px;
 }
 
 /*# sourceMappingURL=Records.css.map */

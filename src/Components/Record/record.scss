@@ -1,0 +1,32 @@
+.formRecord{
+  width: 300px;
+  display: flex;
+  background: #ffffff60;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  margin: 25px auto 0;
+  border-radius: 20px;
+  padding: 10px;
+  h2{
+    color: #ffffff;
+    margin-bottom: 10px;
+  }
+  input{
+    border-radius: 5px;
+    padding: 5px;
+    border: none;
+    outline: none;
+    color: #1BBC9B;
+    font-size: 18px;
+  }
+  button{
+    border: none;
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 18px;
+    color: #1BBC9B;
+  }
+}

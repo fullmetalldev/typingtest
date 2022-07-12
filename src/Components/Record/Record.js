@@ -1,6 +1,6 @@
 import React from 'react';
 import {getDatabase, ref, child, push, update} from "firebase/database";
-
+import "./record.css";
 
 const Record = ({all, accuracy}) => {
 
@@ -21,12 +21,12 @@ const Record = ({all, accuracy}) => {
     }
 
     return (
-        <form onSubmit={(e) => {
+        <form className="formRecord" onSubmit={(e) => {
             writeNewPost(e.target[0].value)
         }} style={{position: "relative", zIndex: 3, cursor: "pointer"}}>
             <label>
-                <h3>Ваше имя:</h3>
-                <input placeholder="Name:" type="text"/>
+                <h2>Ваше имя:</h2>
+                <input type="text"/>
             </label>
             <button>Готово!</button>
         </form>

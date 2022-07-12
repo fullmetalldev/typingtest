@@ -7,20 +7,24 @@
     top: 0;
     opacity: 0;
   }
+  .userTextIn{
+    color: #ffffff;
+  }
   .text{
     position: relative;
   }
   .userText{
-    color: #1BBC9B;
+    color: #63D471;
   }
   .statistic{
-    margin-top: 30px;
+    margin-bottom: 30px;
     display: flex;
     align-items: center;
     column-gap: 15px;
-    background-color: #ffffff;
+    background-color: #ffffff60;
     border-radius: 10px;
     width: 100%;
+    color: #ffffff;
     padding: 15px;
   }
 }

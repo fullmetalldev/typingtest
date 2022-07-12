@@ -1,17 +1,26 @@
 .Records{
+  background-color: #ffffff60;
+  border-radius: 15px;
   margin-top: 20px;
+  padding: 15px;
   h2{
     color: #1BBC9B;
   }
   ul{
     margin-top: 10px;
-    list-style-type: decimal;
-    padding-left: 10px;
+    list-style-type: none;
     display: flex;
     flex-direction: column;
     gap: 10px;
     li{
+      display: flex;
+      align-items: center;
+      column-gap: 10px;
       font-size: 18px;
+      color: white;
+      span{
+        width: 100px;
+      }
     }
   }
 }

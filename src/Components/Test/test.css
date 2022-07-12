@@ -6,20 +6,24 @@
   top: 0;
   opacity: 0;
 }
+.Test .userTextIn {
+  color: #ffffff;
+}
 .Test .text {
   position: relative;
 }
 .Test .userText {
-  color: #1BBC9B;
+  color: #63D471;
 }
 .Test .statistic {
-  margin-top: 30px;
+  margin-bottom: 30px;
   display: flex;
   align-items: center;
   column-gap: 15px;
-  background-color: #ffffff;
+  background-color: #ffffff60;
   border-radius: 10px;
   width: 100%;
+  color: #ffffff;
   padding: 15px;
 }
 
