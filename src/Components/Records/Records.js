@@ -27,7 +27,7 @@ const Records = () => {
     useEffect(() => {
         onValue(starCountRef, async (snapshot) => {
             const data = snapshot.val();
-            setRecords(Object.values(data))
+            setRecords(Object.values(data).sort((prev, next)=>  next.length - prev.length))
         });
     }, []);
 
@@ -43,8 +43,6 @@ const Records = () => {
                             <span style={{marginRight: 25}}>Скорость: {item.length}</span>
                             <span>Точность: {item.accuracy}%</span>
                         </li>
-
-
                     )) : "EMPTY!"}
             </ul>
 
